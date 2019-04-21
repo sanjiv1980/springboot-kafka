@@ -16,7 +16,6 @@ public class ApiController {
 	@Autowired
 	UserRepository userRepository;
 	
-	
 	@RequestMapping(path = "users/{id}", method = RequestMethod.GET)
 	public User getUser(@PathVariable("id") long id) {
 		return userRepository.findById(id).orElse(null); 
